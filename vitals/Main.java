@@ -13,7 +13,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        assert(batteryIsOk(25, 70, 0.7) == true);
+        assert(batteryIsOk(25, 70, 0.7f) == true);
         assert(batteryIsOk(50, 85, 0) == false);
         System.out.println("Some more tests needed");
     }
