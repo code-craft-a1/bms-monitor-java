@@ -13,8 +13,8 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        assert(vitalsAreOk(25, 70, 0.7) == true);
-        assert(vitalsAreOk(50, 85, 0) == false);
+        assert(batteryIsOk(25, 70, 0.7) == true);
+        assert(batteryIsOk(50, 85, 0) == false);
         System.out.println("Some more tests needed");
     }
 }
