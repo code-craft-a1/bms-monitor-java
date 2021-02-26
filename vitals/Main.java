@@ -1,20 +1,20 @@
 package vitals;
 
 public class Main {
-    static boolean vitalsAreOk(float bpm, float spo2, float respRate) {
-        if(bpm < 70 || bpm > 150) {
+    static boolean batteryIsOk(float temperature, float soc, float chargeRate) {
+        if(temperature < 0 || temperature > 45) {
             return false;
-        } else if(spo2 < 90) {
+        } else if(soc < 20 || soc > 80) {
             return false;
-        } else if(respRate < 30 || respRate > 95) {
+        } else if(chargeRate > 0.8) {
             return false;
         }
         return true;
     }
 
     public static void main(String[] args) {
-        assert(vitalsAreOk(80, 97, 40) == true);
-        assert(vitalsAreOk(60, 98, 40) == false);
+        assert(vitalsAreOk(25, 70, 0.7) == true);
+        assert(vitalsAreOk(50, 85, 0) == false);
         System.out.println("Some more tests needed");
     }
 }
